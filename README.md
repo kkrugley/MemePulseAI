@@ -1,10 +1,9 @@
 # MemePulseAI 🧠🤖
 
-[![Python](https://img.shields.io/badge/Python-3.11+-blue?style=for-the-badge&logo=python)](https://www.python.org/)
-[![Flask](https://img.shields.io/badge/Flask-black?style=for-the-badge&logo=flask)](https://flask.palletsprojects.com/)
-[![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
-[![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://telegram.org/)
-[![made-with-love](https://img.shields.io/badge/Made%20with-❤️-red.svg?style=for-the-badge)](https://github.com/kkrugley/MemePulseAI)
+[![Статус проекта](https://img.shields.io/badge/статус-делается-brightgreen.svg)](https://github.com/kkrugley/MemePulseAI)
+[![Python 3.11+](https://img.shields.io/badge/Python-3.11+-blue.svg)](https://www.python.org/)
+[![Лицензия: MIT](https://img.shields.io/badge/Лицензия-Пиратская-yellow.svg)](https://github.com/kkrugley/MemePulseAI/blob/main/LICENSE)
+[![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?logo=telegram&Color=Blue&logoColor=white)](https://t.me/pasza_spider_man)
 
 **MemePulseAI** — это самообучающаяся система, которая анализирует вашу эмоциональную реакцию на мемы и автоматически публикует в Telegram-канал только тот контент, который вам действительно нравится.
 
@@ -113,5 +112,3 @@ python create_db.py
     python scheduler.py
     ```
 Планировщик автоматически запустит первоначальный парсинг и затем будет работать по расписанию: парсить мемы каждые 4 часа и публиковать лучший в 20:00.
-
----
