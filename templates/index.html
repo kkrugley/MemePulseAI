@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MemePulseAI</title>
+    <link rel="icon" href="{{ url_for('static', filename='favicon.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <div class="app-container">
+        <h1 class="meme-title">{{ meme_title }}</h1>
+        <input type="hidden" id="memeId" value="{{ meme_id }}">
+        <div class="content-area">
+            <div class="main-column">
+                <div class="image-container">
+                    <!-- ВОТ ИСПРАВЛЕННАЯ СТРОКА -->
+                    <img src="{{ meme_url if meme_url.startswith('http') else url_for('static', filename='images/' + meme_url) }}" alt="{{ meme_title }}" id="memeImage">
+                </div>
+                <a href="/" class="button next-meme-button">Следующий мем!</a>
+            </div>
+            <div class="sidebar-column">
+                <div class="camera-container">
+                    <video id="webcam" autoplay playsinline></video>
+                </div>
+                <div id="emotion-result">
+                    Анализ эмоций...
+                </div>
+                <div class="model-status-container">
+                    <span>Статус модели:</span>
+                    <!-- Проверяем переменную model_is_trained -->
+                    {% if model_is_trained %}
+                    <span id="modelStatus" class="status-trained">Обучена</span>
+                    {% else %}
+                    <span id="modelStatus" class="status-not-trained">Не обучена</span>
+                    {% endif %}
+                </div>
+                <button id="trainButton" class="button">Обучить модель</button>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

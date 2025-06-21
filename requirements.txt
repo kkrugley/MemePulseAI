@@ -1,0 +1,26 @@
+# Основной фреймворк
+flask
+dotenv
+
+# База данных
+sqlalchemy
+
+# Парсинг
+praw
+requests
+beautifulsoup4
+vk-api
+
+# Анализ эмоций и работа с изображениями
+opencv-python
+deepface
+tensorflow
+tf-keras
+
+# Рекомендательная модель
+scikit-learn
+joblib
+
+# Telegram-бот и планировщик
+aiogram
+apscheduler
