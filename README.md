@@ -115,3 +115,40 @@ python create_db.py
     python scheduler.py
     ```
 Планировщик автоматически запустит первоначальный парсинг и затем будет работать по расписанию: парсить мемы каждые 4 часа и публиковать лучший в 20:00.
+
+```
+MemePulseAI
+├─ app.py
+├─ create_db.py
+├─ Procfile
+├─ README.md
+├─ requirements.txt
+├─ scheduler.py
+├─ src
+│  ├─ database
+│  │  ├─ models.py
+│  │  └─ __init__.py
+│  ├─ emotion_analyzer
+│  │  └─ __init__.py
+│  ├─ parsers
+│  │  ├─ reddit_parser.py
+│  │  ├─ vk_parser.py
+│  │  └─ __init__.py
+│  ├─ recommender
+│  │  ├─ model.py
+│  │  └─ __init__.py
+│  ├─ telegram_bot
+│  │  ├─ poster.py
+│  │  └─ __init__.py
+│  └─ __init__.py
+├─ static
+│  ├─ css
+│  │  └─ main.css
+│  ├─ favicon.png
+│  ├─ js
+│  │  └─ main.js
+│  └─ __init.py__
+└─ templates
+   └─ index.html
+
+```

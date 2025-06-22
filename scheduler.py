@@ -44,13 +44,13 @@ def run_parsing_job():
     try:
         # Передаем сюда наши переменные с количеством
         print("\n--- Парсинг русскоязычного Reddit ---")
-        fetch_and_save_reddit_memes(RU_SUBREDDITS, count_per_subreddit=COUNT_RU_REDDIT)
+        fetch_and_save_reddit_memes(RU_SUBREDDITS, limit_per_subreddit=COUNT_RU_REDDIT)
         
         print("\n--- Парсинг VK ---")
         fetch_and_save_vk_memes(VK_GROUPS, count=COUNT_VK)
         
         print("\n--- Парсинг англоязычного Reddit ---")
-        fetch_and_save_reddit_memes(EN_SUBREDDITS, count_per_subreddit=COUNT_EN_REDDIT)
+        fetch_and_save_reddit_memes(EN_SUBREDDITS, limit_per_subreddit=COUNT_EN_REDDIT)
 
         print(f"\n[{time.ctime()}] Все задачи парсинга успешно завершены.")
     except Exception as e:
