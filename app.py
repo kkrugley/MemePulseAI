@@ -7,6 +7,8 @@ import numpy as np
 import cv2
 import logging
 import pandas as pd
+from dotenv import load_dotenv
+
 
 from flask import Flask, render_template, g, request, jsonify
 from sqlalchemy import create_engine, not_
@@ -16,6 +18,8 @@ from deepface import DeepFace
 # Абсолютные импорты, которые работают всегда
 from src.database.models import Meme, Reaction
 from src.recommender.model import MemeRecommender
+
+load_dotenv()
 
 # --- Настройка приложения ---
 app = Flask(__name__)
